@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amina Qadeer | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header id="header">
+    <div class="container">
+      <nav>
+        <img src="images/logo.png.png" class="logo" alt="Logo" />
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>UI/UX Designer | Web Developer</p>
+        <h1>Hi, I'm <span>Amina Qadeer</span></h1>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/user.png.png" alt="Amina Qadeer" />
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>I'm a passionate Computer Science student specializing in web development, database design, and programming. With a strong academic background and multiple projects, I’m focused on building clean, user-friendly solutions.</p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+            <p class="tab-links" onclick="openTab('experience')">Experience</p>
+            <p class="tab-links" onclick="openTab('education')">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Web Development</span><br>HTML, CSS, JavaScript, React</li>
+              <li><span>Database Development</span><br>MySQL, SQL Server, ER Diagrams</li>
+              <li><span>Programming</span><br>Python, C++, Data Structures</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>2025</span><br>Internship - Graphic Designing</li>
+              <li><span>2024</span><br>Internship - Computer Networking</li>
+              <li><span>2023</span><br>Web Development Course</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>BS Computer Science</span><br>Pak Austria Institute</li>
+              <li><span>F.Sc</span><br>Jinnah College, Haripur (1018/1100)</li>
+              <li><span>Matric</span><br>Jinnah Jam-e School (1092/1100)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <h2>Web Design</h2>
+          <p>Responsive and user-friendly website interfaces tailored to user needs.</p>
+        </div>
+        <div>
+          <h2>Database Management</h2>
+          <p>Designing optimized, secure databases with structured schema and normalization.</p>
+        </div>
+        <div>
+          <h2>Programming Solutions</h2>
+          <p>Problem-solving using algorithms, logical designs, and modular programming.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Projects</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/ecommerce.png.png" alt="E-Commerce Website">
+          <div class="layer">
+            <h3>E-Commerce Database Project</h3>
+            <p>A shopping system using MySQL and PHP for product and user management.</p>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/event.png.png" alt="Event Ticketing">
+          <div class="layer">
+            <h3>DSA - Event Ticketing</h3>
+            <p>Designed with queues and linked lists for real-time ticket booking.</p>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/shopping.png" alt="Shopping Management">
+        <div class="layer">
+            <h3>COAL-Shopping Management</h3>
+            <p>Built in assembly language to manage inventory and billing via command interface.</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h1 class="sub-title">Contact Me</h1>
+      <div class="contact-info">
+        <p><strong>Phone:</strong> 0335-3040307</p>
+        <p><strong>Email:</strong> aminaqadeer2005@gmail.com</p>
+        <p><strong>Location:</strong> Haripur, Pakistan</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Amina Qadeer. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const tabLinks = document.querySelectorAll(".tab-links");
+    const tabContents = document.querySelectorAll(".tab-contents");
+
+    function openTab(tabName) {
+      tabLinks.forEach(link => link.classList.remove("active-link"));
+      tabContents.forEach(content => content.classList.remove("active-tab"));
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabName).classList.add("active-tab");
+    }
+  </script>
+</body>
+</html>
